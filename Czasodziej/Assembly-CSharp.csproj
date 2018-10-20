@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/edyta/Desktop/Repo gry/PodstawyGierGrupa18/Czasodziej/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
