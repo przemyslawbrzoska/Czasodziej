@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterMovement : MonoBehaviour
 {
@@ -67,8 +68,15 @@ public class MonsterMovement : MonoBehaviour
          if (displayMessage)
          {
              GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 200f, 200f), message, gUIStyle);
-         }
-     }
+            StartCoroutine(waitAndRestart());
+        }
+    }
+
+    public IEnumerator waitAndRestart()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("SampleScene");
+    }
     bool isPlayerMoving()
     {
         if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameScript : MonoBehaviour {
 
@@ -31,6 +32,13 @@ public class EndGameScript : MonoBehaviour {
         if (displayMessage)
         {
             GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 200f, 200f), message, gUIStyle);
+            StartCoroutine(waitAndRestart());
         }
     }
+    public IEnumerator waitAndRestart()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("SampleScene");
+    }
+    
 }
