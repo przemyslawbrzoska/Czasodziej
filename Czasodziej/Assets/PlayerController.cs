@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed;
     private Rigidbody2D rb2d;
+    public Vector2 position;
+
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -41,5 +43,7 @@ public class PlayerController : MonoBehaviour {
         {
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         }
+
+        position = rb2d.transform.position;
     }
 }
