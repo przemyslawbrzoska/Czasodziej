@@ -8,7 +8,7 @@ public class MonsterMovement : MonoBehaviour
     private float step;
     public Vector2 cos;
     private Rigidbody2D rb;
-    private bool displayMessage = true;
+    private bool displayMessage = false;
     PlayerController refScript;
 
 
@@ -27,8 +27,8 @@ public class MonsterMovement : MonoBehaviour
 
     void Movement()
     {
-        // na razie tylko sprawdza czy używamy strzałek, trzeba dopisaić też WSAD
-        if (!(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)))
+       
+        if (!isPlayerMoving())
         {
             step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, refScript.position, step);
@@ -61,12 +61,21 @@ public class MonsterMovement : MonoBehaviour
     GUIStyle gUIStyle = new GUIStyle();
 
     // jak odkomentujemy poniższą funkcję to będzie komunikat DEAD przy kolizji potwora i playera
-    /* public void OnGUI()
+    public void OnGUI()
      {
          gUIStyle.fontSize = 40;
          if (displayMessage)
          {
              GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 200f, 200f), message, gUIStyle);
          }
-     }*/
+     }
+    bool isPlayerMoving()
+    {
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+            || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+            return true;
+        else return false;
+
+
+    }
 }
