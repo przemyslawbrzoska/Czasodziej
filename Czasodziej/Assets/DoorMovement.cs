@@ -6,7 +6,7 @@ public class DoorMovement : MonoBehaviour {
 
     public Vector3 targetPosition = new Vector3(16.75F, 8.31F, 0);
     public Vector3 initialPosition = new Vector3(12.5F, 10F, 0);
-    public float speed = 0.3F;
+    public float speed = 0.8F;
     PlayerController refScript;
 
     private Rigidbody2D rb2d;

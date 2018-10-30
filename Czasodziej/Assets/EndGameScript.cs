@@ -37,8 +37,10 @@ public class EndGameScript : MonoBehaviour {
     }
     public IEnumerator waitAndRestart()
     {
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("SampleScene");
+
+        SceneManager.LoadScene("Level1");
+        yield return new WaitForSeconds(1f);
+        
     }
     
 }

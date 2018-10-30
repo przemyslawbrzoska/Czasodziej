@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destoy : MonoBehaviour {
 
-    public float Time = 5f;
+    public float Time = 3f;
     // Use this for initialization
     void Start()
     {
