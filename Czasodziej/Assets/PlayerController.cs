@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     private Rigidbody2D rb2d;
     public Vector2 position;
+    private KeyCode latestKey;
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +41,7 @@ void Movement()
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
@@ -50,7 +51,7 @@ void Movement()
             transform.Translate(Vector2.up * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         }

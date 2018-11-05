@@ -46,7 +46,7 @@ public class MonsterMovement : MonoBehaviour
 
         if (otherObject == "Player") displayMessage = true;
 
-        Debug.Log("Kolizja z " + otherObject);
+        Debug.Log("Kolizja " +this.name +" z " + otherObject);
     }
 
     // w przypadku kolizji przesuwa się w prawo - to takie prowizoryczne rozwiązanie, w przyszłości trzeba umożliwić przesuwanie się w różne strony
