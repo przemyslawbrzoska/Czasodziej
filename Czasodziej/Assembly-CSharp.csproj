@@ -61,15 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CreateRunes.cs" />
-    <Compile Include="Assets\Destoy.cs" />
-    <Compile Include="Assets\DoorMovement.cs" />
-    <Compile Include="Assets\EndGameScript.cs" />
-    <Compile Include="Assets\EndingScript.cs" />
-    <Compile Include="Assets\MonsterMovement.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
-    <Compile Include="Assets\Runes.cs" />
+    <Compile Include="Assets\Scripts\BarScript.cs" />
+    <Compile Include="Assets\Scripts\CreateRunes.cs" />
+    <Compile Include="Assets\Scripts\Destoy.cs" />
+    <Compile Include="Assets\Scripts\DoorMovement.cs" />
+    <Compile Include="Assets\Scripts\EndGameScript.cs" />
+    <Compile Include="Assets\Scripts\EndingScript.cs" />
+    <Compile Include="Assets\Scripts\MonsterMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Runes.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GIT/PodstawyGierGrupa18/Czasodziej/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
