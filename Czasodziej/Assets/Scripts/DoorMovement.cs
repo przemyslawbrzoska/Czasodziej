@@ -31,6 +31,7 @@ public class DoorMovement : MonoBehaviour {
                 Vector3 temp = targetPosition;
                 targetPosition = initialPosition;
                 initialPosition = temp;
+                transform.Rotate(Vector3.forward * -180);
             }
         }
     }

@@ -55,7 +55,7 @@ public class MonsterMovement : MonoBehaviour
     //niestety czasami potwór wychodzi za planszę przez to przesunięcie
     private void OnCollisionStay2D(Collision2D collision)
     {
-        transform.Translate(Vector2.right * step);
+        transform.Translate(Vector2.up * step);
     }
 
     readonly string message = "DEAD!";

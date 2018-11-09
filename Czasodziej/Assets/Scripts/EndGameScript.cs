@@ -7,7 +7,7 @@ public class EndGameScript : MonoBehaviour {
 
     PlayerController refScript;
     private bool displayMessage = false;
-    readonly string message = "WIN!";
+    readonly string message = "";
     GUIStyle gUIStyle = new GUIStyle();
     // Use this for initialization
     void Start () {

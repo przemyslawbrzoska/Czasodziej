@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 8fc60d6d98d1d584cb677c1c0795d662
+guid: 5a84bb9979fdc8a40aea9851e59cb601
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - earth: {fileID: 1937854817205564, guid: b72d988cfe54c114a8336e15ebc4c478, type: 2}
+  - water: {fileID: 1168868480338376, guid: a5b95727c41117443a2ca15cf437462a, type: 2}
+  - fire: {fileID: 1117053012286966, guid: 6c413e2e07bbe9f4fbfd0518563c21fd, type: 2}
+  - air: {fileID: 1472107625614870, guid: 7937e8e70b2ede24ea9e18a75c4213d3, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
