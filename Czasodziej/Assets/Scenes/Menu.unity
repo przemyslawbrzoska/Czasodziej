@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 336796030}
   - component: {fileID: 336796029}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 370, y: 5}
+  m_SizeDelta: {x: 170, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336796029
 MonoBehaviour:
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 382179471}
   - component: {fileID: 382179470}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 802069709}
   - component: {fileID: 802069708}
   m_Layer: 5
-  m_Name: Title TexMeshPro Text
+  m_Name: Menu Head Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 1707679098}
   - component: {fileID: 1707679097}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

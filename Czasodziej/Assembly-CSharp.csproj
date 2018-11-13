@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\BarScript.cs" />
      <Compile Include="Assets\Scripts\ButtonExit.cs" />
      <Compile Include="Assets\Scripts\ButtonPlay.cs" />
+     <Compile Include="Assets\Scripts\Compass.cs" />
      <Compile Include="Assets\Scripts\CreateRunes.cs" />
      <Compile Include="Assets\Scripts\Destoy.cs" />
      <Compile Include="Assets\Scripts\DoorMovement.cs" />
