@@ -15,8 +15,9 @@ public class PostTutorialScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("enter"))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
+            Resources.UnloadUnusedAssets();
             SceneManager.UnloadSceneAsync("PostTutorial");
             AsyncOperation async = SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
         }

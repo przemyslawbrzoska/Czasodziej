@@ -1,2 +1,2 @@
-szerokosc: 430 px
-wysokosc: 687 px
+szerokosc: 402 px
+wysokosc: 648 px
