@@ -12,7 +12,7 @@ public class PreTutorialScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("enter"))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("TutorialScene");
         }
