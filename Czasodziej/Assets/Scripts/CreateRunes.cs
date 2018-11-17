@@ -45,7 +45,7 @@ public class CreateRunes : MonoBehaviour
     private GameObject player;
     protected int howManyE = 10, howManyF = 1, howManyW = 5, howManyA = 3;
     protected float airDelay = 0, waterDelay = 0, earthDelay = 0;
-    private int aDelay, wDelay, eDelay;
+  //  private int aDelay, wDelay, eDelay;
     MonsterMovement refMonster;
 
 
@@ -63,16 +63,16 @@ public class CreateRunes : MonoBehaviour
         earthDelay -= Time.deltaTime;
 
         DelayOrNot();
-        aDelay = (int)airDelay;
+       // aDelay = (int)airDelay;
 
         airQuantity.text = howManyA.ToString();
         fireQuantity.text = howManyF.ToString();
         earthQuantity.text = howManyE.ToString();
         waterQuantity.text = howManyW.ToString();
 
-        airDelayText.text = aDelay.ToString("f0");
-        waterDelayText.text = waterDelay.ToString("f0");
-        earthDelayText.text = earthDelay.ToString("f0");
+      //  airDelayText.text = aDelay.ToString("f0");
+       // waterDelayText.text = waterDelay.ToString("f0");
+       // earthDelayText.text = earthDelay.ToString("f0");
 
         Click();
 
