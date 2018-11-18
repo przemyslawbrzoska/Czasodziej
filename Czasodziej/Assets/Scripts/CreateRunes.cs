@@ -42,7 +42,7 @@ public class CreateRunes : MonoBehaviour
     // public Sprite fireSprite;
     public Sprite noFireSprite;
     // private Vector2 changeMonsterPosition;
-    private GameObject player;
+   PlayerController player;
     protected int howManyE = 10, howManyF = 1, howManyW = 5, howManyA = 3;
     protected float airDelay = 0, waterDelay = 0, earthDelay = 0;
   //  private int aDelay, wDelay, eDelay;
@@ -54,6 +54,9 @@ public class CreateRunes : MonoBehaviour
     {
         refMonster = GameObject.FindWithTag("Monster").GetComponent<MonsterMovement>();
         var script = (MonsterMovement)refMonster.GetComponent(typeof(MonsterMovement));
+
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        var play = (PlayerController)player.GetComponent(typeof(PlayerController));
     }
 
     void Update()
@@ -165,8 +168,8 @@ public class CreateRunes : MonoBehaviour
     {
         //isEarth = true;
         howManyE -= 1;
-        var runeOfTheEarth = Instantiate(earth);
-        runeOfTheEarth.transform.position = transform.position;
+       var runeOfTheEarth = Instantiate(earth);
+        runeOfTheEarth.transform.position = new Vector2(player.position.x + 3,player.position.y);
 
         // runeOfTheEarth.transform.rotation = transform.rotation;
         // var earthRb = runeOfTheEarth.GetComponent<Rigidbody2D>();
@@ -178,7 +181,7 @@ public class CreateRunes : MonoBehaviour
         // isWater = true;
         howManyW -= 1;
         var runeOFTheWater = Instantiate(water);
-        runeOFTheWater.transform.position = transform.position;
+        runeOFTheWater.transform.position = new Vector2(player.position.x + 3, player.position.y);
     }
 
     void RuneOfTheFire()
@@ -186,16 +189,16 @@ public class CreateRunes : MonoBehaviour
         //isFire = true;
         howManyF -= 1;
         var runeOFTheFire = Instantiate(fire);
-        runeOFTheFire.transform.position = transform.position;
+        runeOFTheFire.transform.position = new Vector2(player.position.x + 3, player.position.y);
     }
 
     void RuneOfTheAir()
     {
         //isAir = true;
-        player = GameObject.FindWithTag("Player");
+   //     player = GameObject.FindWithTag("Player");
         howManyA -= 1;
         var runeOFTheAir = Instantiate(air);
-        runeOFTheAir.transform.position = transform.position;
+        runeOFTheAir.transform.position = new Vector2(player.position.x + 3, player.position.y);
     }
 
 
