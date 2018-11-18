@@ -73,9 +73,9 @@ public class CreateRunes : MonoBehaviour
         earthQuantity.text = howManyE.ToString();
         waterQuantity.text = howManyW.ToString();
 
-      //  airDelayText.text = aDelay.ToString("f0");
-       // waterDelayText.text = waterDelay.ToString("f0");
-       // earthDelayText.text = earthDelay.ToString("f0");
+        airDelayText.text = airDelay.ToString("f0");
+        waterDelayText.text = waterDelay.ToString("f0");
+        earthDelayText.text = earthDelay.ToString("f0");
 
         Click();
 
