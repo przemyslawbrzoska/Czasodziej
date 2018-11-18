@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,10 @@ public class MonsterMovement : MonoBehaviour
 {
     public float speed;
     private float step;
-    public Vector2 cos;
     private Rigidbody2D rb;
     private bool displayMessage = false;
     PlayerController refScript;
+    private Animator anim;
 
 
     // Use this for initialization
@@ -18,7 +19,39 @@ public class MonsterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         refScript = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        anim = GetComponent<Animator>();
     }
+
+
+    void Movement()
+    {
+
+        if (!isPlayerMoving())
+        {
+            step = speed * Time.deltaTime;
+            Vector2 movementVector = refScript.position - rb.position;
+            transform.position = Vector2.MoveTowards(transform.position, refScript.position, step);
+
+            setAnimationProperties(movementVector, true);
+            if (speed > 5) speed -= 0.005f;
+        }
+        else
+        {
+            setAnimationProperties(Vector2.zero, false);
+            if (speed <= 30)
+            {
+                speed += 0.02f;
+            }
+        }
+    }
+
+    private void setAnimationProperties(Vector2 movementVector,bool isMoving)
+    {
+        anim.SetBool("walking", isMoving);
+        anim.SetFloat("speed_x", Math.Sign(movementVector.x));
+        anim.SetFloat("speed_y", Math.Sign(movementVector.y));
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -26,19 +59,6 @@ public class MonsterMovement : MonoBehaviour
         Movement();
     }
 
-    void Movement()
-    {
-       
-        if (!isPlayerMoving())
-        {
-            step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, refScript.position, step);
-
-            if (speed > 5) speed -= 0.005f;
-        }
-
-        else if (speed <=30) speed += 0.02f;
-    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -83,7 +103,6 @@ public class MonsterMovement : MonoBehaviour
             || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
             return true;
         else return false;
-
 
     }
 }
