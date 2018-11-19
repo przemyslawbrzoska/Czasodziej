@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\CreateRunes.cs" />
     <Compile Include="Assets\Scripts\Destoy.cs" />
     <Compile Include="Assets\Scripts\DoorMovement.cs" />
+    <Compile Include="Assets\Scripts\EndGameLevel2.cs" />
     <Compile Include="Assets\Scripts\EndGameScript.cs" />
     <Compile Include="Assets\Scripts\EndingScript.cs" />
     <Compile Include="Assets\Scripts\FishScript.cs" />
