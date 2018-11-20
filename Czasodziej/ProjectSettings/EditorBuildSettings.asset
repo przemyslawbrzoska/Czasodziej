@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 735944c186bc5e14389c7925553c41df
   - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: be26bab2810abc14283b47a29bf5cc63
+  - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: 2d4798ca71db07f4b98fd6bf3dc59c0f
+  - enabled: 1
+    path: Assets/Scenes/Level0.unity
+    guid: da32910430bd9fb40912d8e48bdce1d9
   m_configObjects: {}
