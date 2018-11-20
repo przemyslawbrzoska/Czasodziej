@@ -131,6 +131,12 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public static void BackToMenu()
+    {
+        ResumeGame();
+        AsyncOperation async = SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
+    }
+
     internal void hit(float hit)
     {
         healthAmount -= hit;
