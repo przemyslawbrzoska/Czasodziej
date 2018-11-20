@@ -11,12 +11,12 @@ public class BarScript : MonoBehaviour {
     [SerializeField]
     private Image content;
 
-    private MonsterMovement refScript;
+    private Unit refScript;
 
     // Use this for initialization
     void Start ()
     {
-        refScript = GameObject.FindWithTag("Monster").GetComponent<MonsterMovement>();
+        refScript = GameObject.FindWithTag("Monster").GetComponent<Unit>();
     }
 	
 	// Update is called once per frame
@@ -28,7 +28,7 @@ public class BarScript : MonoBehaviour {
 
     private void HandleBar()
     {
-        content.fillAmount = Map(fillAmount,5,30,0,1);
+        content.fillAmount = Map(fillAmount,0,20,0,1);
     }
 
     private float Map(float value, float inMin, float inMax, float outMin, float outMax)
