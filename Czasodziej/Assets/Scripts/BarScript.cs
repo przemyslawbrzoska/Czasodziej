@@ -13,10 +13,12 @@ public class BarScript : MonoBehaviour {
 
     private MonsterMovement refScript;
 
+    public GameObject owner;
+
     // Use this for initialization
     void Start ()
     {
-        refScript = GameObject.FindWithTag("Monster").GetComponent<MonsterMovement>();
+        refScript = owner.GetComponent<MonsterMovement>();
     }
 	
 	// Update is called once per frame

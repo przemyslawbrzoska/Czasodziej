@@ -14,6 +14,7 @@ public class MonsterMovement : MonoBehaviour
     PlayerController refScript;
     private Animator anim;
     private float collisionTimer;
+    //private SpriteRenderer sr;
 
 
     // Use this for initialization
@@ -22,13 +23,20 @@ public class MonsterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         refScript = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         anim = GetComponent<Animator>();
+        //sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         Movement();
+        
     }
+
+   /* private void Update()
+    {
+        sr.color = Color.Lerp(sr.color, Color.white, Time.deltaTime / 0.7f);
+    }*/
 
     void Movement()
     {
