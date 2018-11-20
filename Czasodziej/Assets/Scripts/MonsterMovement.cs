@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class MonsterMovement : MonoBehaviour
 {
+    public AudioClip sound;
+    public AudioSource source;
+
+
     public float speed;
     private float step;
     public Vector2 cos;
     private Rigidbody2D rb;
     private bool displayMessage = false;
     PlayerController refScript;
+    AudioScript aScript;
     private Animator anim;
     private float collisionTimer;
     //private SpriteRenderer sr;
@@ -22,7 +27,9 @@ public class MonsterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         refScript = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        aScript = GameObject.FindWithTag("audio").GetComponent<AudioScript>();
         anim = GetComponent<Animator>();
+        source.clip = sound;
         //sr = GetComponent<SpriteRenderer>();
     }
 
@@ -75,6 +82,7 @@ public class MonsterMovement : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerController>().hit(0.2f);
             collisionTimer = 0;
+            source.Play();
         }
 
         Debug.Log("Kolizja " + this.name + " z " + otherObject);
