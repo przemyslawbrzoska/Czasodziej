@@ -46,14 +46,14 @@ public class CreateRunes : MonoBehaviour
     protected int howManyE = 10, howManyF = 1, howManyW = 5, howManyA = 3;
     protected float airDelay = 0, waterDelay = 0, earthDelay = 0;
   //  private int aDelay, wDelay, eDelay;
-    Unit refMonster;
+    MonsterMovementOld refMonster;
 
 
 
     void Start()
     {
-        refMonster = GameObject.FindWithTag("Monster").GetComponent<Unit>();
-        var script = (Unit)refMonster.GetComponent(typeof(Unit));
+        refMonster = GameObject.FindWithTag("Monster").GetComponent<MonsterMovementOld>();
+        var script = (MonsterMovementOld)refMonster.GetComponent(typeof(Unit));
 
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         var play = (PlayerController)player.GetComponent(typeof(PlayerController));

@@ -16,7 +16,7 @@ public class BarScript : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        refScript = GameObject.FindWithTag("Monster").GetComponent<Unit>();
+        refScript = GameObject.FindWithTag("CleverMonster").GetComponent<Unit>();
     }
 	
 	// Update is called once per frame

@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\PathFinding\Grid.cs" />
     <Compile Include="Assets\Scripts\PathFinding\Heap.cs" />
+    <Compile Include="Assets\Scripts\PathFinding\MonsterBehaviour.cs" />
+    <Compile Include="Assets\Scripts\PathFinding\MonsterMovementOld.cs" />
     <Compile Include="Assets\Scripts\PathFinding\Node.cs" />
     <Compile Include="Assets\Scripts\PathFinding\PathFinding.cs" />
     <Compile Include="Assets\Scripts\PathFinding\PathRequestManager.cs" />

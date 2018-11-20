@@ -29,7 +29,7 @@ public class PathRequestManager : MonoBehaviour
 
     void TryProcessNext()
     {
-        if (!isProcessingPath && pathRequestQueue.Count > 0)
+       if (!isProcessingPath && pathRequestQueue.Count > 0)
         {
             currentPathRequest = pathRequestQueue.Dequeue();
             isProcessingPath = true;

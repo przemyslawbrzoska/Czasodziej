@@ -12093,10 +12093,12 @@ GameObject:
   - component: {fileID: 1164441187}
   - component: {fileID: 1164441188}
   - component: {fileID: 1164441189}
+  - component: {fileID: 1164441192}
+  - component: {fileID: 1164441191}
   - component: {fileID: 1164441190}
   m_Layer: 0
   m_Name: CleverMonster
-  m_TagString: Monster
+  m_TagString: CleverMonster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12181,10 +12183,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 1164441186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1bf14739106b2943b346ba515185913, type: 3}
+  m_Script: {fileID: 11500000, guid: c5126bab9219e784a931be7b793fd753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cos: {x: 0, y: 0}
+--- !u!61 &1164441191
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164441186}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029376984, y: -0.29362965}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.02, y: 6.48}
+    newSize: {x: 4.02, y: 6.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6674652, y: 5.8927402}
+  m_EdgeRadius: 0
+--- !u!50 &1164441192
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164441186}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1199194507
 GameObject:
   m_ObjectHideFlags: 0
@@ -21314,10 +21361,9 @@ GameObject:
   - component: {fileID: 1429113783}
   - component: {fileID: 1429113782}
   - component: {fileID: 1429113781}
-  - component: {fileID: 1429113786}
   m_Layer: 0
   m_Name: Monster (3)
-  m_TagString: Monster
+  m_TagString: CleverMonster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21330,9 +21376,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429113780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1bf14739106b2943b346ba515185913, type: 3}
+  m_Script: {fileID: 11500000, guid: f4117b49341e2454597abd4fa5794ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   cos: {x: 0, y: 0}
 --- !u!50 &1429113782
 Rigidbody2D:
@@ -21353,7 +21400,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1429113783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21438,19 +21485,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1429113786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1429113780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150c993f672790842b706d76549184f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 161062371}
-  speed: 2
 --- !u!1 &1642578933
 GameObject:
   m_ObjectHideFlags: 0

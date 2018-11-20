@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - HUD
+  - CleverMonster
   layers:
   - Default
   - TransparentFX
