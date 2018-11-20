@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\EndGameScript.cs" />
     <Compile Include="Assets\Scripts\EndingScript.cs" />
     <Compile Include="Assets\Scripts\FishScript.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PostTutorialScript.cs" />

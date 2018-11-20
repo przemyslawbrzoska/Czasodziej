@@ -12,6 +12,7 @@ public class MonsterMovement : MonoBehaviour
     private bool displayMessage = false;
     PlayerController refScript;
     private Animator anim;
+    private float collisionTimer;
 
 
     // Use this for initialization
@@ -64,7 +65,11 @@ public class MonsterMovement : MonoBehaviour
     {
         string otherObject = collision.gameObject.name;
 
-        if (otherObject == "Player") displayMessage = true;
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerController>().hit(0.2f);
+            collisionTimer = 0;
+        }
 
         Debug.Log("Kolizja " +this.name +" z " + otherObject);
     }
@@ -75,28 +80,19 @@ public class MonsterMovement : MonoBehaviour
     //niestety czasami potwór wychodzi za planszę przez to przesunięcie
     private void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("Kolizja " + this.name + " z " + collision.gameObject.name);
+        if (collision.gameObject.name.Equals("Player") && collisionTimer > 1f)
+        {
+            collisionTimer = 0;
+            collision.gameObject.GetComponent<PlayerController>().hit(0.2f);
+        }
+        else
+        {
+            collisionTimer += Time.fixedDeltaTime;
+        }
         transform.Translate(Vector2.up * step);
     }
 
-    readonly string message = "DEAD!";
-    GUIStyle gUIStyle = new GUIStyle();
-
-    // jak odkomentujemy poniższą funkcję to będzie komunikat DEAD przy kolizji potwora i playera
-    public void OnGUI()
-     {
-         gUIStyle.fontSize = 40;
-         if (displayMessage)
-         {
-             GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 200f, 200f), message, gUIStyle);
-            StartCoroutine(waitAndRestart());
-        }
-    }
-
-    public IEnumerator waitAndRestart()
-    {
-        yield return new WaitForSeconds(0f);
-        SceneManager.LoadScene("SampleScene");
-    }
     bool isPlayerMoving()
     {
         if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
