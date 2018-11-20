@@ -15,7 +15,7 @@ public class ButtonPlay : MonoBehaviour {
 		
 	}
 
-    public void buttonInteract()
+    public void ButtonInteract()
     {
         SceneManager.LoadScene("PreTutorial");
     }
