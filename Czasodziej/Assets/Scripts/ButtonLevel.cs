@@ -4,7 +4,8 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonLevel : MonoBehaviour {
+public class ButtonLevel : MonoBehaviour
+{
 
     // Use this for initialization
     void Start()
