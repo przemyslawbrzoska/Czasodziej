@@ -22,6 +22,5 @@ public class ButtonLevel : MonoBehaviour
     public void ButtonInteract(string sceneName)
     {
         AsyncOperation async = SceneManager.LoadSceneAsync("MenuLevel", LoadSceneMode.Single);
-        Debug.Log("Probowano odpalic scene " + sceneName);
     }
 }

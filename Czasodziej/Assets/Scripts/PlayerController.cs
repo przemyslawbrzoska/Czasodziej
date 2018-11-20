@@ -60,9 +60,23 @@ void Movement()
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("PauseMenu");
+            PauseGame();
         }
 
         position = rb2d.transform.position;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
+    }
+
+    public static void ResumeGame()
+    {
+        if (Time.timeScale == 0){
+            SceneManager.UnloadSceneAsync("PauseMenu");
+            Time.timeScale = 1;
+        }
     }
 }
